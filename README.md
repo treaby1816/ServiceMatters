@@ -10,18 +10,7 @@ Architected by **Adewole Felix Bamidele**, this project is a "Zero-Touch" digita
 ## 🏗️ Architectural Design
 The system utilizes a **Serverless Low-Code Architecture** to ensure high availability and low maintenance costs for the government.
 
-```mermaid
-graph TD
-    A[Physical Memo/File] -->|OCR Scan| B(Digital Input Interface)
-    B -->|Validation & Indexing| C{AppSheet Core Engine}
-    C -->|Metadata| D[(Google Sheets / Cloud SQL)]
-    C -->|File Storage| E[Google Drive Secure Vault]
-    D -->|Trigger| F[Automation Bot]
-    F -->|Action 1| G[Generate Movement Slip PDF]
-    F -->|Action 2| H[Email Notification to HOS]
-    F -->|Action 3| I[Update Analytics Dashboard]
-
-    🛠️ Technical Know-How & Implementation
+##  🛠️ Technical Know-How & Implementation
 1. Data Security & Access Control (RBAC)
 UserEmail() Logic: Implemented strictly governed "Security Filters" ensuring that Junior Officers can only view files assigned to their desk, while the Permanent Secretary has a global view.
 
@@ -34,9 +23,21 @@ The "Movement" Bot: Automatically generates a PDF "Movement Slip" whenever a fil
 
 3. Offline-First Engineering
 The application is engineered to cache 100% of the active registry locally, allowing civil servants to continue indexing files during internet outages. Sync occurs automatically via a "Store & Forward" mechanism upon reconnection.
-
 🚀 Impact
 100% Digitization of active Service Matters files.
+
+```mermaid
+graph TD
+    A[Physical Memo/File] -->|OCR Scan| B(Digital Input Interface)
+    B -->|Validation & Indexing| C{AppSheet Core Engine}
+    C -->|Metadata| D[(Google Sheets / Cloud SQL)]
+    C -->|File Storage| E[Google Drive Secure Vault]
+    D -->|Trigger| F[Automation Bot]
+    F -->|Action 1| G[Generate Movement Slip PDF]
+    F -->|Action 2| H[Email Notification to HOS]
+    F -->|Action 3| I[Update Analytics Dashboard]
+
+    
 
 Zero-Loss Record: Eliminated incidents of "missing files" via digital tracking.
 
