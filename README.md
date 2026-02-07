@@ -25,6 +25,12 @@ The "Movement" Bot: Automatically generates a PDF "Movement Slip" whenever a fil
 The application is engineered to cache 100% of the active registry locally, allowing civil servants to continue indexing files during internet outages. Sync occurs automatically via a "Store & Forward" mechanism upon reconnection.
 🚀 Impact
 100% Digitization of active Service Matters files.
+Zero-Loss Record: Eliminated incidents of "missing files" via digital tracking.
+
+Transparency: Real-time dashboard visibility for the Head of Service.
+
+Architected by: Adewole Felix Bamidele Master's Degree (2015) | Solutions Architect
+
 
 ```mermaid
 graph TD
@@ -36,11 +42,3 @@ graph TD
     F -->|Action 1| G[Generate Movement Slip PDF]
     F -->|Action 2| H[Email Notification to HOS]
     F -->|Action 3| I[Update Analytics Dashboard]
-
-    
-
-Zero-Loss Record: Eliminated incidents of "missing files" via digital tracking.
-
-Transparency: Real-time dashboard visibility for the Head of Service.
-
-Architected by: Adewole Felix Bamidele Master's Degree (2015) | Solutions Architect
